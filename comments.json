@@ -1,14 +1,26 @@
 [
     {
-        "author": "Pete Hunt",
-        "text": "Hey there!"
+        "id": "1",
+        "author": "Matt",
+        "text": "Oh hi, I didn't see you there, Megan. Want to go for a run?",
+        "likes": "2"
     },
     {
-        "author": "Paul O’Shannessy",
-        "text": "React is *great*!"
+        "id": "2",
+        "author": "Megan",
+        "text": "Nah, I am going to do exercise **tomorrow**",
+        "likes": "7"
     },
     {
-        "author": "matt",
-        "text": "hi"
+        "id": "3",
+        "author": "Matt",
+        "text": "Sure Megan. Sure.",
+        "likes": "8"
+    },
+    {
+        "id": "4",
+        "author": "Megan",
+        "text": "Seriously...",
+        "likes": "3"
     }
 ]

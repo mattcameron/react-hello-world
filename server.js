@@ -42,6 +42,22 @@ app.post('/api/comments', function(req, res) {
   });
 });
 
+app.post('/api/like', function(req, res) {
+  fs.readFile(COMMENTS_FILE, function(err, data) {
+    var comments = JSON.parse(data);
+    var adjustedComment;
+    comments.forEach(function(comment) {
+      if (comment.id === req.body.id) {
+        comment.likes = req.body.likes.toString();
+        adjustedComment = comment;
+      }
+    })
+    fs.writeFile(COMMENTS_FILE, JSON.stringify(comments, null, 4), function(err) {
+      res.setHeader('Cache-Control', 'no-cache');
+      res.json(adjustedComment);
+    });
+  });
+});
 
 app.listen(app.get('port'), function() {
   console.log('Server started: http://localhost:' + app.get('port') + '/');
